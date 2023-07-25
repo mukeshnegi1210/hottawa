@@ -1,11 +1,26 @@
-$(function() {
+$(function () {
     handleTopArrowShow();
 
+    handleFixedHeader();
+
+
     // handling on scroll header
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         handleTopArrowShow();
+        handleFixedHeader();
     });
 
+    // handle bg of header on scroll 
+    function handleFixedHeader() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 400) {
+
+            $("header").addClass("fixed-header");
+        }
+        else {
+            $("header").removeClass("fixed-header");
+        }
+    }
 
     $("#ContactForm").validate();
 
@@ -35,7 +50,7 @@ $(function() {
     });
 
 
-    $('button[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+    $('button[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         $('.customer-slider').slick('setPosition');
     })
 
@@ -51,22 +66,22 @@ $(function() {
     }
 
 
-    $('.scrollToTop').click(function() {
+    $('.scrollToTop').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 100);
         return false;
     });
 
     // scroll top ends ===============================
 
-    $('.menu-open').click(function() {
+    $('.menu-open').click(function () {
         $('.primary-menu-outer').addClass('active');
     })
-    $('.menu-close').click(function() {
+    $('.menu-close').click(function () {
 
-            $('.primary-menu-outer').removeClass('active');
-        })
-        // block scroll ===============================
-    $('.primary-menu li a ').click(function() {
+        $('.primary-menu-outer').removeClass('active');
+    })
+    // block scroll ===============================
+    $('.primary-menu li a ').click(function () {
         $('.primary-menu-outer').removeClass('active');
         var get_scroll_id = $(this).attr('data-scroll');
         $('.primary-menu li a').removeClass("active");
@@ -81,7 +96,7 @@ $(function() {
         $('.primary-menu li a').removeClass("active");
         $(`.primary-menu li a[data-scroll="${window.location.hash}"]`).addClass("active")
         $('html, body').animate({ scrollTop: 0 }, 100);
-        setTimeout(function() {
+        setTimeout(function () {
             $("html, body").delay(300).animate({
                 scrollTop: $(window.location.hash).offset().top - 70
             }, 600);
@@ -91,6 +106,6 @@ $(function() {
 
 })
 
-$(window).on('load', function() {
+$(window).on('load', function () {
     $('#aa-preloader-area').delay(300).fadeOut('d-none');
 });
