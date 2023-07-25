@@ -1,11 +1,15 @@
-header.fixed-header {
+header {
     background-color: #ffffff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-header .logo {
-    max-width: 74px;
-    max-height: 56px;
+header .inner {
+    padding: 15px 0;
+}
+
+header .logo img {
+    height: 56px;
+    transition: all 300ms ease-in-out;
 }
 
 header .primary-menu li a {
@@ -19,6 +23,14 @@ header .primary-menu li a {
     display: block;
 }
 
+
+header.fixed-header .logo img {
+    height: 40px;
+}
+
+header.fixed-header .inner {
+    padding: 10px 0;
+}
 
 /* <-------- Landing page css -----------> */
 
@@ -152,6 +164,11 @@ footer a:hover {
     color: #ffffff;
     border-color: #FC8019;
     border-radius: 10px;
+}
+
+#AppPreviews .nav-tabs .nav-item .nav-link.active.customer-nav-link {
+    background-color: #fbc02d;
+    border-color: #fbc02d;
 }
 
 #AppPreviews .slider-img {
