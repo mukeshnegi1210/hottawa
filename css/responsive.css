@@ -1,0 +1,128 @@
+@media (max-width: 1199px) {
+    header .primary-menu li {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    h1,
+    .h1 {
+        font-size: 36px;
+    }
+    h2,
+    .h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    h3,
+    .h3 {
+        font-size: 22px;
+    }
+    h4,
+    .h4 {
+        font-size: 20px;
+    }
+    h5,
+    .h5 {
+        font-size: 18px;
+    }
+    h6,
+    .h6 {
+        font-size: 14px;
+    }
+    .sub-title {
+        font-size: 16px;
+    }
+    .primary-menu-outer {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        transition: all 300ms ease-in;
+        visibility: hidden;
+    }
+    .primary-menu-outer.active {
+        left: 0;
+        visibility: visible;
+    }
+    .primary-menu-outer .menu-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+    }
+    .menu-open {
+        margin-left: auto;
+        background-color: transparent;
+        line-height: 25px;
+    }
+    .primary-menu {
+        background-color: #EEEEEE;
+        max-width: 153px;
+        min-height: 176px;
+        right: 15px;
+        margin-left: auto;
+        margin-right: 15px;
+        margin-top: 40px;
+        padding: 25px 15px;
+        position: relative;
+        border-radius: 10px;
+    }
+    header .primary-menu li {
+        padding: 0;
+    }
+    header .primary-menu li a {
+        padding: 10px 0px;
+        background-color: transparent;
+        border-color: transparent;
+        border: 0;
+    }
+    #Banner {
+        padding-top: 180px;
+    }
+    #Banner h1 {
+        text-align: center;
+    }
+    #Interested .form-group {
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #Banner .sub-title {
+        font-size: 16px;
+    }
+    #Banner .launch-text {
+        font-size: 12px;
+        text-align: center;
+    }
+    #Banner h1 {
+        font-size: 36px;
+    }
+    #PartnerApp .application-features-list .application-feature p {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 75%;
+    }
+    #Download a img {
+        max-width: 121px;
+    }
+    #Interested .form-group {
+        max-width: 100%;
+        width: 100%;
+    }
+    footer .border-bottom {
+        border: 0 !important;
+    }
+}
